@@ -29,6 +29,15 @@ __dirname ,__filename ,exports ,require, module 还有global下面所有的变�
 3. 如果直接在exports或module.exports添加属性或者参数的时候，是没有区别的
 4. 如果改变exports的值或者引用地址的时候，这个时候exports就不等于module.exports,
 
+##7.自定义一个npm包并且发布到npm官网上面去
+1. 新建一个新的github仓库，把本地自定义的包推到远程仓库
+2. 在自定义包里面执行`npm init`新建package.json文件;
+> name名称不能包含大写字母和中文，最好起特殊意义的名字，确保此包在官网没有被注册过，不然会报错; 每次发布的时候`npm publish`的时候，version一定要确保比之前的版本大
+3. npm publish发布自己的包
+> 此过程可能会遇到一些问题:确保自己使用的npm镜像是npm官网的; 确保自己已经注册了npm用户,并且命令行已经登录了(具体步骤百度)
+4. 如果发布成功的话，就可以在项目里面以第三方模块的方式安装了
+
+
 
 
 
