@@ -34,6 +34,7 @@ __dirname ,__filename ,exports ,require, module 还有global下面所有的变�
 2. 在自定义包里面执行`npm init`新建package.json文件;
 3. npm publish发布自己的包
 4. 如果发布成功的话，就可以在项目里面以第三方模块的方式安装了
+
 > name名称不能包含大写字母和中文，最好起特殊意义的名字，确保此包在官网没有被注册过，不然会报错; 每次发布的时候`npm publish`的时候，version一定要确保比之前的版本大
 > 此过程可能会遇到一些问题:确保自己使用的npm镜像是npm官网的; 确保自己已经注册了npm用户,并且命令行已经登录了(具体步骤百度)
 
