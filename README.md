@@ -21,7 +21,11 @@ __dirname ,__filename ,exports ,require, module 还有global下面所有的变�
 3. 如果还是找不到，会尝试将require的参数当成包来查找,查找package.json文件里面的main属性对应的模块，如果有该模块的话直接获取该模块;如果没有的话,在该包下面尝试添加.js,.json来查找
 4. 如果还是找不到的话，会继续查找module.paths里面的下一个目录，当所有的目录都找完了，还是找不到的话，会尝试查找系统模块，如果这个时候再找不多，就会报错
 
-
+##6.nodejs中exports和module.exports的区别
+1. node帮我们实现了exports = module.exports = {}
+2. 当加载模块的时候，模块执行完返回的结果就是module.exports
+3. 如果直接在exports或module.exports添加属性或者参数的时候，是没有区别的
+4. 如果改变exports的值或者引用地址的时候，这个时候exports就不等于module.exports,
 
 
 
