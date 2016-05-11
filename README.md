@@ -6,6 +6,7 @@ __dirname ,__filename ,exports ,require, module 还有global下面所有的变�
 ```
 ##2.I/O读写速度
 1. cpu > 内存 > 硬盘 > 光盘 > 网络请求
+
 ##3.同步执行and异步执行
 1. 同步执行:cup执行任务的时候，安装顺序执行，前面任务执行了，后面的任务才能别执行，如果前面的任务执行时间比较长的话，后面的任务就一直等着
 2. 异步执行:cup跳过需要等待很长时间的任务，执行后面的任务
@@ -18,7 +19,7 @@ __dirname ,__filename ,exports ,require, module 还有global下面所有的变�
 ###当查找内置模块或者第三方模块的时候，执行的步骤如下
 1. 获取module.paths里面的第一个目录查找
 2. 尝试添加.js, .json文件进行查找
-3. 如果还是找不到，会尝试将require的参数当成包来查找,查找package.json文件里面的main属性对应的模块，如果有该模块的话直接获取该模块;如果没有的话,在该包下面尝试添加.js,.json来查找
+3. 如果还是找不到，会尝试将require的参数当成包来查找,查找package.json文件里面的main属性对应的模块，如果有该模块的话直接获取该模块;如果没有的话,在该包下面尝试查找index.js,index.json
 4. 如果还是找不到的话，会继续查找module.paths里面的下一个目录，当所有的目录都找完了，还是找不到的话，会尝试查找系统模块，如果这个时候再找不多，就会报错
 
 ##6.nodejs中exports和module.exports的区别
