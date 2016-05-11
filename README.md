@@ -26,7 +26,7 @@ __dirname ,__filename ,exports ,require, module 还有global下面所有的变�
 ##6.nodejs中exports和module.exports的区别
 1. node帮我们实现了exports = module.exports = {}
 2. 当加载模块的时候，模块执行完返回的结果就是module.exports
-3. 如果直接在exports或module.exports添加属性或者参数的时候，是没有区别的
+3. 如果直接在exports或module.exports添加属性或者的时候，是没有区别的
 4. 如果改变exports的值或者引用地址的时候，这个时候exports就不等于module.exports,
 
 ##7.自定义一个npm包并且发布到npm官网上面去
@@ -38,7 +38,8 @@ __dirname ,__filename ,exports ,require, module 还有global下面所有的变�
 > 注意: name名称不能包含大写字母和中文，最好起特殊意义的名字，确保此包在官网没有被注册过，不然会报错; 每次发布的时候`npm publish`的时候，version一定要确保比之前的版本大
 > 此过程可能会遇到一些问题:确保自己使用的npm镜像是npm官网的; 确保自己已经注册了npm用户,并且命令行已经登录了(具体步骤百度)
 
-
+##8.进程和线程的关系
+1. 进程是应用程序在处理机上面的一次运行过程，线程是进程的一部分，一个进程包含多个线程在运行
 
 
 
